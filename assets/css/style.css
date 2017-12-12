@@ -16,11 +16,6 @@ h1 {
 
 #red {
 	background-image: url('../images/red.jpg');
-	transition: .5s;
-}
-
-#red:hover {
-	background-color: red;
 }
 
 #blue {

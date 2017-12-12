@@ -24,7 +24,7 @@ function setCrystalVal() {
 	blueVal = Math.floor((Math.random() * 12) + 1);
 	greenVal = Math.floor((Math.random() * 12) + 1);
 	yellowVal = Math.floor((Math.random() * 12) +1);
-	console.log('red:' + redVal + ' blue:' + blueVal + ' green:' + greenVal + ' yellow:' + yellowVal);
+	// console.log('red:' + redVal + ' blue:' + blueVal + ' green:' + greenVal + ' yellow:' + yellowVal);
 }
 
 function scoreChecker() {
