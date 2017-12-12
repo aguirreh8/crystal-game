@@ -8,8 +8,8 @@ let wins = 0;
 let losses = 0;
 
 function initializeGame() {
-	currentNum = 0;
-	$('#current').html = currentNum;
+	currentScore = 0;
+	$('#current').html(currentScore);
 	pickNum();
 	setCrystalVal();
 }
@@ -24,12 +24,22 @@ function setCrystalVal() {
 	blueVal = Math.floor((Math.random() * 12) + 1);
 	greenVal = Math.floor((Math.random() * 12) + 1);
 	yellowVal = Math.floor((Math.random() * 12) +1);
+	console.log('red:' + redVal + ' blue:' + blueVal + ' green:' + greenVal + ' yellow:' + yellowVal);
 }
 
-function gameChecker() {
+function scoreChecker() {
 	if (currentScore === currentNum) {
 		wins++;
-
+		alert("You win!");
+		$('#wins').html(wins);
+		initializeGame();
+	} else if (currentScore > currentNum) {
+		losses++;
+		alert('You loose..');
+		$('#losses').html(losses);
+		initializeGame();
+	} else {
+		return;
 	}
 }
 
@@ -39,21 +49,25 @@ $(document).ready(function() {
 	$('#red').on('click', function() {
 		currentScore = currentScore + redVal;
 		$('#current').html(currentScore);
+		scoreChecker();
 	})
 
 	$('#blue').on('click', function() {
 		currentScore = currentScore + blueVal;
 		$('#current').html(currentScore);
+		scoreChecker();
 	})
 
 	$('#green').on('click', function() {
 		currentScore = currentScore + greenVal;
 		$('#current').html(currentScore);
+		scoreChecker();
 	})
 
 	$('#yellow').on('click', function() {
 		currentScore = currentScore + yellowVal;
 		$('#current').html(currentScore);
+		scoreChecker();
 	})
 
 });
