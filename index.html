@@ -1,10 +1,16 @@
+<!--
+	Crystal Game
+	Written by Henry Aguirre 2017
+-->
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Crystal Collector</title>
+	<!-- Create styling links -->
 	<link rel="stylesheet" href="assets/css/reset.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css" />
+	<!-- Require scripts -->
 	<script
 	  	src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 	  	integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
@@ -34,15 +40,18 @@
 		<div class='row'>
 			<div class='col'></div>
 			<div class='col-md-2'>
+				<!-- Display current goal from random number -->
 				<p class='tally'>Current Goal:</p>
 				<p class='tally' id="goal">99</p>
 			</div>
 			<div class='col-md-2'>
+				<!-- Display user's game status -->
 				<p class='tally'>Wins:</p>
 				<p class='tally' id='wins'>0</p>
 				<p class='tally'>Losses:</p>
 				<p class='tally' id='losses'>0</p>
 			</div>
+			<!-- Clickable crystal images -->
 			<div class='col-md-1 crystal' id='red'></div>
 			<div class='col-md-1 crystal' id='blue'></div>
 			<div class="col-md-1 crystal" id='green'></div>
@@ -52,10 +61,14 @@
 		<div class='row'>
 			<div class='col'></div>
 			<div class='col-md-4'>
+				<!-- Update current score -->
 				<p class="tally">Current Score: <span id='current'>0</span></p>
 			</div>
 			<div class="col-md-1"></div>
 		</div>
-	</container>		
+	</container>
+	<footer class="footer">
+		Made by Henry Aguirre
+	</footer>		
 </body>
 </html>
